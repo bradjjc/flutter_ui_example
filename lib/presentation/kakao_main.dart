@@ -72,7 +72,7 @@ class _cacaoMainState extends State<cacaoMain>
         child: TextField(
           decoration: InputDecoration(
             labelText: '어디로갈까요?',
-
+            labelStyle: TextStyle(fontSize: 20 ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(
                   Radius.circular(10.0)
