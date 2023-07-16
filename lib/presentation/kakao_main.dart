@@ -30,7 +30,6 @@ class _cacaoMainState extends State<cacaoMain> with SingleTickerProviderStateMix
         bottom:  TabBar(
           controller: _tabcontroller,
           isScrollable: true,
-          splashBorderRadius: ,
           tabs:const <Widget> [
 
             Padding(
@@ -67,7 +66,18 @@ class _cacaoMainState extends State<cacaoMain> with SingleTickerProviderStateMix
         ),
 
       ),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
+        child: TextField(
+        decoration: InputDecoration(
+        border: OutlineInputBorder(
+    borderRadius: BorderRadius.all(
+    Radius.circular(10.0)), // 검색창 모서리 각도 10 둥글게 한다.
+    ),
 
+        ),
+    ),
+      ),
     );
   }
 }
