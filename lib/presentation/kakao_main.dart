@@ -67,14 +67,18 @@ class _cacaoMainState extends State<cacaoMain>
 
       ),
       body: const Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0) ,
+
         child: TextField(
           decoration: InputDecoration(
+            labelText: '어디로갈까요?',
+
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(
                   Radius.circular(10.0)
               ),
-              borderSide: BorderSide(color: Colors.blueAccent),
+              borderSide: BorderSide(color: Colors.blueAccent,width: 5)
+
 
             ),
 
