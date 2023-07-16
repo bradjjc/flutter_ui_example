@@ -30,13 +30,40 @@ class _cacaoMainState extends State<cacaoMain> with SingleTickerProviderStateMix
         bottom:  TabBar(
           controller: _tabcontroller,
           isScrollable: true,
+          splashBorderRadius: ,
           tabs:const <Widget> [
-            Tab(text: '마이카',
+
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Tab(
+                  child: Text(
+                    "마이카",
+                    style: TextStyle(fontSize: 30),
+                  )
+              ),
+            ), Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Tab(
+
+                  child: Text(
+                    "홈",
+                    style: TextStyle(fontSize: 30)
+                    ,
+                  )
+              ),
             ),
-            Tab(text: '홈',
+            Padding(
+              padding: EdgeInsets.all(20.0)
+              ,
+              child: Tab(
+                  child: Text(
+                    "여행",
+                    style: TextStyle(fontSize: 30),
+                  )
+              ),
             ),
-            Tab(text: '여행',)
           ],
+
         ),
 
       ),
