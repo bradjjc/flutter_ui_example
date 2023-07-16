@@ -7,14 +7,14 @@ class cacaoMain extends StatefulWidget {
   State<cacaoMain> createState() => _cacaoMainState();
 }
 
-class _cacaoMainState extends State<cacaoMain> with SingleTickerProviderStateMixin {
+class _cacaoMainState extends State<cacaoMain>
+    with SingleTickerProviderStateMixin {
   late TabController _tabcontroller;
 
   @override
   void initState() {
     super.initState();
     _tabcontroller = TabController(length: 3, vsync: this);
-
   }
 
   @override
@@ -27,10 +27,10 @@ class _cacaoMainState extends State<cacaoMain> with SingleTickerProviderStateMix
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        bottom:  TabBar(
+        bottom: TabBar(
           controller: _tabcontroller,
           isScrollable: true,
-          tabs:const <Widget> [
+          tabs: const <Widget>[
 
             Padding(
               padding: EdgeInsets.all(20.0),
@@ -69,14 +69,17 @@ class _cacaoMainState extends State<cacaoMain> with SingleTickerProviderStateMix
       body: const Padding(
         padding: EdgeInsets.all(16.0),
         child: TextField(
-        decoration: InputDecoration(
-        border: OutlineInputBorder(
-    borderRadius: BorderRadius.all(
-    Radius.circular(10.0)), // 검색창 모서리 각도 10 둥글게 한다.
-    ),
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(
+                  Radius.circular(10.0)
+              ),
+              borderSide: BorderSide(color: Colors.blueAccent),
 
+            ),
+
+          ),
         ),
-    ),
       ),
     );
   }
