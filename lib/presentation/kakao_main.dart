@@ -84,7 +84,10 @@ class _cacaoMainState extends State<cacaoMain>
               icon: Icon(Icons.home),
             ),
             Text('집'),
-            VerticalDivider(thickness: 1,color:Colors.black,),
+            VerticalDivider(thickness: 1,
+              indent: 20,
+              endIndent: 0,
+              width: 20,),
             IconButton(onPressed: null, icon:Icon(Icons.apartment)
             ),
             Text('회사'),
