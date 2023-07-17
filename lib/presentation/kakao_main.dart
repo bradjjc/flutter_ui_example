@@ -83,8 +83,13 @@ class _cacaoMainState extends State<cacaoMain>
               onPressed: null,
               icon: Icon(Icons.home),
             ),
-            Text('집')
+            Text('집'),
+            VerticalDivider(thickness: 1,color:Colors.black,),
+            IconButton(onPressed: null, icon:Icon(Icons.apartment)
+            ),
+            Text('회사'),
           ],
+
         ),
       ]),
     );
