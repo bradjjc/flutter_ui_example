@@ -73,7 +73,9 @@ class _cacaoMainState extends State<cacaoMain>
             child: TextField(
               decoration: InputDecoration(
                 prefixText: '어디로 갈까요?',
+                suffixText: '지금 ',
 
+                suffixStyle: TextStyle(fontSize: 20),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(
                       Radius.circular(10.0)
