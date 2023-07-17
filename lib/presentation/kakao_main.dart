@@ -66,24 +66,27 @@ class _cacaoMainState extends State<cacaoMain>
         ),
 
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(16.0) ,
+      body: const Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: TextField(
+              decoration: InputDecoration(
+                prefixText: '어디로 갈까요?',
 
-        child: TextField(
-          decoration: InputDecoration(
-            labelText: '어디로갈까요?',
-            labelStyle: TextStyle(fontSize: 20 ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                  Radius.circular(10.0)
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(10.0)
+                  ),
+                  borderSide: BorderSide(color: Colors.blueAccent,width: 5),
+
+                ),
+
               ),
-              borderSide: BorderSide(color: Colors.blueAccent,width: 5)
-
-
             ),
 
           ),
-        ),
+        ],
       ),
     );
   }
