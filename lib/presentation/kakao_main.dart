@@ -31,67 +31,62 @@ class _cacaoMainState extends State<cacaoMain>
           controller: _tabcontroller,
           isScrollable: true,
           tabs: const <Widget>[
-
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Tab(
                   child: Text(
-                    "마이카",
-                    style: TextStyle(fontSize: 30),
-                  )
-              ),
-            ), Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Tab(
-
-                  child: Text(
-                    "홈",
-                    style: TextStyle(fontSize: 30)
-                    ,
-                  )
-              ),
+                "마이카",
+                style: TextStyle(fontSize: 30),
+              )),
             ),
             Padding(
-              padding: EdgeInsets.all(20.0)
-              ,
+              padding: EdgeInsets.all(20.0),
               child: Tab(
                   child: Text(
-                    "여행",
-                    style: TextStyle(fontSize: 30),
-                  )
-              ),
+                "홈",
+                style: TextStyle(fontSize: 30),
+              )),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Tab(
+                  child: Text(
+                "여행",
+                style: TextStyle(fontSize: 30),
+              )),
             ),
           ],
-
         ),
-
       ),
-      body: const Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(16.0),
-            child: TextField(
-              decoration: InputDecoration(
-                prefixText: '어디로 갈까요?',
-                suffixText: '지금  출발 ',
-                suffixIcon: IconButton(onPressed: null, icon: Icon(Icons.expand_more),),
-
-                suffixStyle: TextStyle(fontSize: 20),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                      Radius.circular(10.0)
-                  ),
-                  borderSide: BorderSide(color: Colors.blueAccent,width: 5),
-
-                ),
-
+      body: const Column(children: [
+        Padding(
+          padding: EdgeInsets.all(16.0),
+          child: TextField(
+            decoration: InputDecoration(
+              prefixText: '어디로 갈까요?',
+              suffixText: '지금  출발 ',
+              suffixIcon: IconButton(
+                onPressed: null,
+                icon: Icon(Icons.expand_more),
+              ),
+              suffixStyle: TextStyle(fontSize: 20),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                borderSide: BorderSide(color: Colors.blueAccent, width: 5),
               ),
             ),
-
           ),
-        ],
-      ),
+        ),
+        Row(
+          children: [
+            IconButton(
+              onPressed: null,
+              icon: Icon(Icons.home),
+            ),
+            Text('집')
+          ],
+        ),
+      ]),
     );
   }
 }
-
