@@ -115,20 +115,23 @@ class _kakaoMainState extends State<kakaoMain>
           children: [
             Row(
               children: [
-                SizedBox(
-                    width: 300,
-                    height: 100,
-                    child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20),
+                Padding(
+                  padding: EdgeInsets.only(left: 35),
+                  child: SizedBox(
+                      width: 350,
+                      height: 100,
+                      child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
+
+                              color: Colors.lightBlue,
                           ),
 
-
-                        ),
-
+                      ),
                     ),
-                  ),
+                ),
 
               ],
             ),
