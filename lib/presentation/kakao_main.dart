@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class cacaoMain extends StatefulWidget {
-  const cacaoMain({Key? key}) : super(key: key);
+class kakaoMain extends StatefulWidget {
+  const kakaoMain({Key? key}) : super(key: key);
 
   @override
-  State<cacaoMain> createState() => _cacaoMainState();
+  State<kakaoMain> createState() => _kakaoMainState();
 }
 
-class _cacaoMainState extends State<cacaoMain>
+class _kakaoMainState extends State<kakaoMain>
     with SingleTickerProviderStateMixin {
   late TabController _tabcontroller;
 
@@ -32,7 +32,7 @@ class _cacaoMainState extends State<cacaoMain>
           isScrollable: true,
           tabs: const <Widget>[
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.only(bottom: 20),
               child: Tab(
                   child: Text(
                 "마이카",
@@ -40,7 +40,7 @@ class _cacaoMainState extends State<cacaoMain>
               )),
             ),
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.only(bottom: 20),
               child: Tab(
                   child: Text(
                 "홈",
@@ -48,7 +48,7 @@ class _cacaoMainState extends State<cacaoMain>
               )),
             ),
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.only(bottom: 20),
               child: Tab(
                   child: Text(
                 "여행",
@@ -61,40 +61,64 @@ class _cacaoMainState extends State<cacaoMain>
       body: const Column(children: [
         Padding(
           padding: EdgeInsets.all(16.0),
-          child: TextField(
-            decoration: InputDecoration(
-              prefixText: '어디로 갈까요?',
-              suffixText: '지금  출발 ',
-              suffixIcon: IconButton(
-                onPressed: null,
-                icon: Icon(Icons.expand_more),
+
+          child: Column(
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                  hintText: '어디로갈까요?',
+
+                  suffixText: '지금출발',
+                  suffixIcon: IconButton(
+                    onPressed: null ,
+                    icon: Icon(Icons.expand_more),
+                  ),
+
+                  suffixStyle: TextStyle(fontSize: 20),
+                  hintStyle: TextStyle(fontSize: 20, color: Colors.black),
+                  border: OutlineInputBorder(
+
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide: BorderSide(color: Colors.blueAccent, width: 5),
+                  ),
+
+                ),
+
               ),
-              suffixStyle: TextStyle(fontSize: 20),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                borderSide: BorderSide(color: Colors.blueAccent, width: 5),
-              ),
-            ),
+
+            ],
           ),
-        ),
-        Row(
-          children: [
-            IconButton(
-              onPressed: null,
-              icon: Icon(Icons.home),
-            ),
-            Text('집'),
-            VerticalDivider(thickness: 1,
-              indent: 20,
-              endIndent: 0,
-              width: 20,),
-            IconButton(onPressed: null, icon:Icon(Icons.apartment)
-            ),
-            Text('회사'),
-          ],
 
         ),
-      ]),
+        SizedBox(
+          height: 50,
+          child: Row(
+            children: [
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.home),
+              ),
+              Text('집'),
+
+              VerticalDivider(
+                thickness: 2, // VerticalDivider 뚜께
+                indent: 9,
+                endIndent:15,
+                width: 13,
+              ),
+              IconButton(onPressed: null, icon: Icon(Icons.business)),
+              Text('회사'),
+            ],
+          ),
+
+        ),
+      ]
+
+      ),
+
+
     );
   }
 }
+
+
