@@ -99,7 +99,6 @@ class _kakaoMainState extends State<kakaoMain>
                 icon: Icon(Icons.home),
               ),
               Text('집'),
-
               VerticalDivider(
                 thickness: 2, // VerticalDivider 뚜께
                 indent: 9,
@@ -112,9 +111,33 @@ class _kakaoMainState extends State<kakaoMain>
           ),
 
         ),
-      ]
+        Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                    width: 300,
+                    height: 100,
+                    child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20),
+                          ),
 
+
+                        ),
+
+                    ),
+                  ),
+
+              ],
+            ),
+
+          ],
+        )
+      ]
       ),
+
 
 
     );
