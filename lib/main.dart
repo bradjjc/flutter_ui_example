@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clone/presentation/kakao_main.dart';
 
 
-import 'main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: cacaoMain(),
+      home: const kakaoMain(),
     );
   }
 }
