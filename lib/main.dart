@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_clone/presentation/facebook_main.dart';
 import 'package:flutter_clone/presentation/kakao_main.dart';
 
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const kakaoMain(),
+      home: const FaceBookMain(),
     );
   }
 }
