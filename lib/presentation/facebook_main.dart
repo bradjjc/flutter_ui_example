@@ -56,28 +56,38 @@ class FaceBookMain extends StatelessWidget {
             ),
           ),
         ],
+        elevation: 0,
       ),
       body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Ink(
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.account_circle, size: 50),
-              color: Colors.grey,
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: Ink(
+              child: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.account_circle, size: 50),
+                color: Colors.grey,
+              ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 12, left: 12),
+            padding: const EdgeInsets.only(top: 12, right: 70),
             child: TextButton(
               onPressed: () {},
               child: const Text('무슨생각을 하고계신가요?                   '),
             ),
           ),
           IconButton(
-            alignment: const Alignment(20, 0),
             onPressed: () {},
             icon: const Icon(Icons.camera_alt),
-
+          ),
+          const SizedBox(
+            child: Divider(
+              height: 20,
+              thickness: 4,
+              color: Colors.grey,
+            ),
           ),
         ],
       ),
