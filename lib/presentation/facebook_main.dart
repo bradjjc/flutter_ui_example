@@ -7,22 +7,39 @@ class FaceBookMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        title: Text('facebook'),
+        title: const Text('facebook'),
+        centerTitle: false,
         titleTextStyle: const TextStyle(
           color: Colors.blue,
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),
-        centerTitle: true,
         backgroundColor: Colors.white,
-        leading:ElevatedButton(onPressed: () {  },
-          child: const Icon(Icons.add),
+        actions: [
+          ElevatedButton(
+            onPressed: () {},
+            child: Icon(Icons.add),
+            style: const ButtonStyle(
 
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Ink(
+              decoration: ShapeDecoration(
+                shape: CircleBorder(),
+                color: Colors.grey,
+              ),
+              child: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.search),
+                color: Colors.black,
 
-        ),
-        ),
-
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
