@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 
 class FaceBookMain extends StatelessWidget {
   const FaceBookMain({Key? key}) : super(key: key);
@@ -22,7 +21,6 @@ class FaceBookMain extends StatelessWidget {
             child: Ink(
               decoration: const ShapeDecoration(
                 shape: CircleBorder(),
-
                 color: Colors.grey,
               ),
               child: IconButton(
@@ -32,7 +30,6 @@ class FaceBookMain extends StatelessWidget {
               ),
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.only(left: 8, right: 8),
             child: Ink(
@@ -58,6 +55,19 @@ class FaceBookMain extends StatelessWidget {
               color: Colors.black,
             ),
           ),
+        ],
+      ),
+      body: Row(
+        children: [
+          Ink(
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.account_circle, size: 50),
+              color: Colors.grey,
+            ),
+          ),
+
+
         ],
       ),
     );
