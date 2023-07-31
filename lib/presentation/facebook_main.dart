@@ -66,8 +66,14 @@ class FaceBookMain extends StatelessWidget {
               color: Colors.grey,
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextButton(
+              onPressed: () {},
 
-
+              child: Text('무슨생각을 하고계신가요?                   '),
+            ),
+          ),
         ],
       ),
     );
