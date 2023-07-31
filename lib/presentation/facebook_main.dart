@@ -24,9 +24,9 @@ class FaceBookMain extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 8),
             child: Ink(
-              decoration: ShapeDecoration(
+              decoration: const ShapeDecoration(
                 shape: CircleBorder(),
                 color: Colors.grey,
               ),
