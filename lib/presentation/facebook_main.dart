@@ -67,12 +67,17 @@ class FaceBookMain extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(top: 12, left: 12),
             child: TextButton(
               onPressed: () {},
-
-              child: Text('무슨생각을 하고계신가요?                   '),
+              child: const Text('무슨생각을 하고계신가요?                   '),
             ),
+          ),
+          IconButton(
+            alignment: const Alignment(20, 0),
+            onPressed: () {},
+            icon: const Icon(Icons.camera_alt),
+
           ),
         ],
       ),
