@@ -95,52 +95,57 @@ class FaceBookMain extends StatelessWidget {
           ),
           Column(
             children: [
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                      children: [
-                        Container(
-                            width: 100,
-                            height: 200,
-                            color: Colors.blue,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Container(
-                            width: 100,
-                            height: 200,
-                            color: Colors.grey,
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: Size(100, 200),
+                          shape:  RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Container(
-                            width: 100,
-                            height: 200,
-                            color: Colors.black,),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Container(
-                            width: 100,
-                            height: 200,
-                            color: Colors.grey,),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Container(
-                            width: 100,
-                            height: 200,
-                            color: Colors.grey,),
-                        ),
-                      ],
-                  ),
+                        onPressed: () {},
+                        child: const Text('스토리만들기')),
+                    Container(
+                      width: 100,
+                      height: 200,
+                      color: Colors.grey,
+                      //decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
                     ),
+                    Container(
+                      width: 100,
+                      height: 200,
+                      color: Colors.black,
+                      // decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                    ),
+                    Container(
+                      width: 100,
+                      height: 200,
+                      color: Colors.blueAccent,
+                      //decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                    ),
+                    Container(
+                      width: 100,
+                      height: 200,
+                      color: Colors.grey,
+                      //decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                    ),
+                  ],
+                ),
+              ),
             ],
+          ),
+          const SizedBox(
+            child: Divider(
+              height: 20,
+              thickness: 7,
+              color: Colors.grey,
+            ),
           ),
         ],
       ),
-
     );
   }
 }
