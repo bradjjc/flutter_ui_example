@@ -58,39 +58,87 @@ class FaceBookMain extends StatelessWidget {
         ],
         elevation: 0,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: Ink(
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.account_circle, size: 50),
-                color: Colors.grey,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Ink(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.account_circle, size: 50),
+                    color: Colors.grey,
+                  ),
+                ),
               ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 12, right: 70),
-            child: TextButton(
-              onPressed: () {},
-              child: const Text('무슨생각을 하고계신가요?                   '),
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.camera_alt),
+              Padding(
+                padding: const EdgeInsets.only(top: 12, right: 70),
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text('무슨생각을 하고계신가요?                   '),
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.camera_alt),
+              ),
+            ],
           ),
           const SizedBox(
             child: Divider(
               height: 20,
-              thickness: 4,
+              thickness: 7,
               color: Colors.grey,
             ),
           ),
+          Column(
+            children: [
+                     Row(
+                      children: [
+                        Container(
+                            width: 100,
+                            height: 200,
+                            color: Colors.blue,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: Container(
+                            width: 100,
+                            height: 200,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: Container(
+                            width: 100,
+                            height: 200,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: Container(
+                            width: 100,
+                            height: 200,
+                            color: Colors.grey,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: Container(
+                            width: 100,
+                            height: 200,
+                            color: Colors.grey,),
+                        ),
+                      ],
+                  ),
+
+            ],
+          ),
         ],
       ),
+
     );
   }
 }
