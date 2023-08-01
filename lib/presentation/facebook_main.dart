@@ -200,6 +200,13 @@ class FaceBookMain extends StatelessWidget {
                       height: 400,
                       color: Colors.blue,
                     ),
+                const SizedBox(
+                  child: Divider(
+                    height: 20,
+                    thickness: 7,
+                    color: Colors.grey,
+                  ),
+                ),
                 ],
 
               ),
