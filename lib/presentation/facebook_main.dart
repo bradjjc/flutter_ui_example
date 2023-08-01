@@ -95,7 +95,9 @@ class FaceBookMain extends StatelessWidget {
           ),
           Column(
             children: [
-                     Row(
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
                       children: [
                         Container(
                             width: 100,
@@ -133,7 +135,7 @@ class FaceBookMain extends StatelessWidget {
                         ),
                       ],
                   ),
-
+                    ),
             ],
           ),
         ],
