@@ -58,7 +58,7 @@ class FaceBookMain extends StatelessWidget {
         ],
         elevation: 0,
       ),
-      body: Column(
+      body: ListView(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -99,38 +99,71 @@ class FaceBookMain extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          minimumSize: Size(100, 200),
-                          shape:  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 8, right: 8, top: 4, bottom: 4),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size(100, 200),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
                           ),
-                        ),
-                        onPressed: () {},
-                        child: const Text('스토리만들기')),
-                    Container(
-                      width: 100,
-                      height: 200,
-                      color: Colors.grey,
-                      //decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                          onPressed: () {},
+                          child: const Text('스토리만들기')),
                     ),
-                    Container(
-                      width: 100,
-                      height: 200,
-                      color: Colors.black,
-                      // decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 8, right: 8, top: 4, bottom: 4),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size(100, 200),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text('스토리')),
                     ),
-                    Container(
-                      width: 100,
-                      height: 200,
-                      color: Colors.blueAccent,
-                      //decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 8, right: 8, top: 4, bottom: 4),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size(100, 200),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text('스토리')),
                     ),
-                    Container(
-                      width: 100,
-                      height: 200,
-                      color: Colors.grey,
-                      //decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 8, right: 8, top: 4, bottom: 4),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size(100, 200),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text('스토리')),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 8, right: 8, top: 4, bottom: 4),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black,
+                            minimumSize: const Size(100, 200),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Text('스토리')),
                     ),
                   ],
                 ),
@@ -143,6 +176,35 @@ class FaceBookMain extends StatelessWidget {
               thickness: 7,
               color: Colors.grey,
             ),
+          ),
+          Column(
+            children: [
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+                    Container(
+                  width: 400,
+                  height: 400,
+                  color: Colors.blue,
+                ),
+                    const SizedBox(
+                      child: Divider(
+                        height: 20,
+                        thickness: 7,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Container(
+                      width: 400,
+                      height: 400,
+                      color: Colors.blue,
+                    ),
+                ],
+
+              ),
+              ),
+            ],
           ),
         ],
       ),
