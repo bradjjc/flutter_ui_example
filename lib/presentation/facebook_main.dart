@@ -261,12 +261,27 @@ class FaceBookMain extends StatelessWidget {
                     color: Colors.grey,
                   ),
                 ),
-
               ],
             ),
           ),
         ]),
       ]),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: '홈',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people_alt),
+            label: '친구',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+        ],
+      ),
     );
   }
 }
