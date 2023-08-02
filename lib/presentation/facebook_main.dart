@@ -48,7 +48,7 @@ class FaceBookMain extends StatelessWidget {
           Ink(
             decoration: const ShapeDecoration(
               shape: CircleBorder(),
-              color: Colors.white38,
+              color: Colors.grey,
             ),
             child: IconButton(
               onPressed: () {},
@@ -211,7 +211,6 @@ class FaceBookMain extends StatelessWidget {
                       onPressed: () {},
                       label: const Text('공유하기'),
                       icon: Icon(MdiIcons.shareOutline),
-
                     ),
                   ],
                 ),
@@ -222,11 +221,39 @@ class FaceBookMain extends StatelessWidget {
                     color: Colors.grey,
                   ),
                 ),
-                Container(
-                  width: 400,
-                  height: 400,
-                  color: Colors.blue,
+
+            Container(
+              width: 400,
+              height: 400,
+              color: Colors.blue,
+            ),
+            const SizedBox(
+              child: Divider(
+                height: 20,
+                thickness: 1,
+                color: Colors.grey,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(Icons.thumb_up_alt),
+                  label: const Text('좋아요'),
                 ),
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(Icons.messenger),
+                  label: const Text('댓글'),
+                ),
+                TextButton.icon(
+                  onPressed: () {},
+                  label: const Text('공유하기'),
+                  icon: Icon(MdiIcons.shareOutline),
+                ),
+              ],
+            ),
                 const SizedBox(
                   child: Divider(
                     height: 20,
@@ -234,6 +261,7 @@ class FaceBookMain extends StatelessWidget {
                     color: Colors.grey,
                   ),
                 ),
+
               ],
             ),
           ),
