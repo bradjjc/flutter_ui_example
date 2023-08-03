@@ -257,7 +257,7 @@ class FaceBookMain extends StatelessWidget {
                 const SizedBox(
                   child: Divider(
                     height: 20,
-                    thickness: 7,
+                    thickness: 1,
                     color: Colors.grey,
                   ),
                 ),
@@ -266,22 +266,37 @@ class FaceBookMain extends StatelessWidget {
           ),
         ]),
       ]),
+
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: '홈',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.people_alt),
-            label: '친구',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-          ),
-        ],
+          type: BottomNavigationBarType.fixed,
+      items: const [
+      BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: '홈',
       ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.people_alt),
+        label: '친구',
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.ondemand_video),
+        label: 'watch',
+    ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.account_circle),
+        label: '프로필 '
+      ),
+      BottomNavigationBarItem(
+          icon: Icon(Icons.notifications),
+          label: '알림'
+      ),
+      BottomNavigationBarItem(
+          icon: Icon(Icons.menu),
+          label: '메뉴'
+      ),
+    ]
+    ),
+
     );
   }
 }
