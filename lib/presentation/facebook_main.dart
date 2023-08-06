@@ -307,9 +307,9 @@
 //
 
 
-
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
 class FaceBookMain extends StatelessWidget {
   const FaceBookMain({Key? key}) : super(key: key);
 
@@ -405,7 +405,10 @@ class FaceBookMain extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.25,
+              height: MediaQuery
+                  .of(context)
+                  .size
+                  .height * 0.25,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -413,8 +416,8 @@ class FaceBookMain extends StatelessWidget {
                     padding: const EdgeInsets.only(
                         left: 8, right: 8, top: 4, bottom: 4),
                     child: musicStoryMake(
-                        context: context,
-                        onPress: () {},
+                      context: context,
+                      onPress: () {},
                     ),
                   ),
                   Padding(
@@ -425,11 +428,18 @@ class FaceBookMain extends StatelessWidget {
                       onPress: () {},
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 8, right: 8, top: 4, bottom: 4),
+                    child: makeStoryMake1(
+                      context: context,
+                      onPress: () {},
+                    ),
+                  ),
 
                 ],
               ),
             ),
-
             const SizedBox(
               child: Divider(
                 height: 20,
@@ -525,7 +535,6 @@ class FaceBookMain extends StatelessWidget {
                 ),
               ),
             ]),
-
           ]),
 
       bottomNavigationBar: BottomNavigationBar(
@@ -556,14 +565,14 @@ class FaceBookMain extends StatelessWidget {
               label: '메뉴'
           ),
         ],
-
-
       ),
     );
   }
 
+
   // 스토리 메이스
-  Widget storyMake({required BuildContext context, required Function() onPress, required Widget background, required Widget frountground}){
+  Widget  storyMake(
+      {required BuildContext context, required Function() onPress, required Widget background, required Widget frountground}) {
     return InkWell(
         onTap: onPress,
         // style: ElevatedButton.styleFrom(
@@ -576,7 +585,7 @@ class FaceBookMain extends StatelessWidget {
         child: SizedBox(
           width: MediaQuery.of(context).size.width * 0.3,
           height: MediaQuery.of(context).size.height * 0.22,
-          // decoration: BoxDecoration(
+          //decoration: BoxDecoration(
           //     borderRadius: BorderRadius.circular(26)
           // ),
           child: Stack(
@@ -588,16 +597,47 @@ class FaceBookMain extends StatelessWidget {
         ));
   }
 
+  // 스토리 세번째 스토리 만들기
+  Widget makeStoryMake1(
+      {required BuildContext context, required Function() onPress}) {
+    return storyMake(context: context,
+      onPress: onPress,
+        background: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            image: const DecorationImage(
+                image: AssetImage('assets/images/images.jpeg'),
+                fit: BoxFit.cover
+            ),
+          ),
+        ),
+      frountground: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('KBS 뉴스 '),
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          image: const DecorationImage(
+              image: AssetImage('assets/images/image1.jpeg'),
+              fit: BoxFit.cover
+        ),
+        ),
+      ),
+    );
+  }
+
   // 스토리 두번째 스토리 만들기
-  Widget makeStoryMake({required BuildContext context, required Function() onPress}){
+  Widget makeStoryMake(
+      {required BuildContext context, required Function() onPress}) {
     return storyMake(
       context: context,
       onPress: onPress,
       background: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(16),
           image: const DecorationImage(
-            image: AssetImage('assets/images/imagesTest.jpeg'),
+              image: AssetImage('assets/images/imagesTest.jpeg'),
               fit: BoxFit.cover
           ),
         ),
@@ -618,7 +658,8 @@ class FaceBookMain extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Text('스토리 만들기', textAlign: TextAlign.center, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                child: Text('스토리 만들기', textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
               ),
             ),
             Align(
@@ -627,7 +668,7 @@ class FaceBookMain extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 70.0),
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.05,
-                  width:  MediaQuery.of(context).size.height * 0.05,
+                  width: MediaQuery.of(context).size.height * 0.05,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     color: Colors.white,
@@ -635,7 +676,7 @@ class FaceBookMain extends StatelessWidget {
                   child: Center(
                     child: Container(
                       height: MediaQuery.of(context).size.height * 0.04,
-                      width:  MediaQuery.of(context).size.height * 0.04,
+                      width: MediaQuery.of(context).size.height * 0.04,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
                         color: Colors.blue,
@@ -649,13 +690,14 @@ class FaceBookMain extends StatelessWidget {
               ),
             ),
           ],
-
         ),
       ),
     );
   }
+
   // 스토리 첫번째 뮤직
-  Widget musicStoryMake({required BuildContext context, required Function() onPress}){
+  Widget musicStoryMake(
+      {required BuildContext context, required Function() onPress}) {
     return storyMake(
       context: context,
       onPress: onPress,
@@ -679,8 +721,14 @@ class FaceBookMain extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              height: MediaQuery.of(context).size.height * 0.05,
-              width:  MediaQuery.of(context).size.height * 0.05,
+              height: MediaQuery
+                  .of(context)
+                  .size
+                  .height * 0.05,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .height * 0.05,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
                 color: Colors.white,
@@ -691,7 +739,9 @@ class FaceBookMain extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
-              child: Text('음악', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),),
+              child: Text('음악', style: TextStyle(color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),),
             ),
           ],
         ),
@@ -699,5 +749,6 @@ class FaceBookMain extends StatelessWidget {
     );
   }
 }
+
 
 
