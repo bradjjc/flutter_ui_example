@@ -306,13 +306,11 @@
 //
 //
 
-
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class FaceBookMain extends StatelessWidget {
   const FaceBookMain({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -369,174 +367,167 @@ class FaceBookMain extends StatelessWidget {
         ],
         elevation: 0,
       ),
-      body: ListView(
+      body: ListView(children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Ink(
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.account_circle, size: 50),
-                      color: Colors.grey,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 12, right: 70),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: const Text('무슨생각을 하고계신가요?                   '),
-                  ),
-                ),
-                IconButton(
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Ink(
+                child: IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.camera_alt),
+                  icon: const Icon(Icons.account_circle, size: 50),
+                  color: Colors.grey,
                 ),
-              ],
-            ),
-            const SizedBox(
-              child: Divider(
-                height: 20,
-                thickness: 7,
-                color: Colors.grey,
               ),
             ),
-            SizedBox(
-              height: MediaQuery
-                  .of(context)
-                  .size
-                  .height * 0.25,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 8, right: 8, top: 4, bottom: 4),
-                    child: musicStoryMake(
-                      context: context,
-                      onPress: () {},
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 8, right: 8, top: 4, bottom: 4),
-                    child: makeStoryMake(
-                      context: context,
-                      onPress: () {},
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 8, right: 8, top: 4, bottom: 4),
-                    child: makeStoryMake1(
-                      context: context,
-                      onPress: () {},
-                    ),
-                  ),
-
-                ],
+            Padding(
+              padding: const EdgeInsets.only(top: 12, right: 70),
+              child: TextButton(
+                onPressed: () {},
+                child: const Text('무슨생각을 하고계신가요?                   '),
               ),
             ),
-            const SizedBox(
-              child: Divider(
-                height: 20,
-                thickness: 7,
-                color: Colors.grey,
-              ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.camera_alt),
             ),
-            Column(children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
+          ],
+        ),
+        const SizedBox(
+          child: Divider(
+            height: 20,
+            thickness: 7,
+            color: Colors.grey,
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.25,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+                child: musicStoryMake(
+                  context: context,
+                  onPress: () {},
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+                child: makeStoryMake(
+                  context: context,
+                  onPress: () {},
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+                child: makeStoryMake1(
+                  context: context,
+                  onPress: () {},
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(
+          child: Divider(
+            height: 20,
+            thickness: 7,
+            color: Colors.grey,
+          ),
+        ),
+        Column(children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                Container(
+                  width: 400,
+                  height: 400,
+                  color: Colors.blue,
+                ),
+                const SizedBox(
+                  child: Divider(
+                    height: 20,
+                    thickness: 1,
+                    color: Colors.grey,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: 400,
-                      height: 400,
-                      color: Colors.blue,
+                    TextButton.icon(
+                      onPressed: () {},
+                      icon: const Icon(Icons.thumb_up_alt),
+                      label: const Text('좋아요'),
                     ),
-                    const SizedBox(
-                      child: Divider(
-                        height: 20,
-                        thickness: 1,
-                        color: Colors.grey,
-                      ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      icon: const Icon(Icons.messenger),
+                      label: const Text('댓글'),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        TextButton.icon(
-                          onPressed: () {},
-                          icon: const Icon(Icons.thumb_up_alt),
-                          label: const Text('좋아요'),
-                        ),
-                        TextButton.icon(
-                          onPressed: () {},
-                          icon: const Icon(Icons.messenger),
-                          label: const Text('댓글'),
-                        ),
-                        TextButton.icon(
-                          onPressed: () {},
-                          label: const Text('공유하기'),
-                          icon: Icon(MdiIcons.shareOutline),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      child: Divider(
-                        height: 20,
-                        thickness: 7,
-                        color: Colors.grey,
-                      ),
-                    ),
-
-                    Container(
-                      width: 400,
-                      height: 400,
-                      color: Colors.blue,
-                    ),
-                    const SizedBox(
-                      child: Divider(
-                        height: 20,
-                        thickness: 1,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        TextButton.icon(
-                          onPressed: () {},
-                          icon: const Icon(Icons.thumb_up_alt),
-                          label: const Text('좋아요'),
-                        ),
-                        TextButton.icon(
-                          onPressed: () {},
-                          icon: const Icon(Icons.messenger),
-                          label: const Text('댓글'),
-                        ),
-                        TextButton.icon(
-                          onPressed: () {},
-                          label: const Text('공유하기'),
-                          icon: Icon(MdiIcons.shareOutline),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      child: Divider(
-                        height: 20,
-                        thickness: 7,
-                        color: Colors.grey,
-                      ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: const Text('공유하기'),
+                      icon: Icon(MdiIcons.shareOutline),
                     ),
                   ],
                 ),
-              ),
-            ]),
-          ]),
-
+                const SizedBox(
+                  child: Divider(
+                    height: 20,
+                    thickness: 7,
+                    color: Colors.grey,
+                  ),
+                ),
+                Container(
+                  width: 400,
+                  height: 400,
+                  color: Colors.blue,
+                ),
+                const SizedBox(
+                  child: Divider(
+                    height: 20,
+                    thickness: 1,
+                    color: Colors.grey,
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    TextButton.icon(
+                      onPressed: () {},
+                      icon: const Icon(Icons.thumb_up_alt),
+                      label: const Text('좋아요'),
+                    ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      icon: const Icon(Icons.messenger),
+                      label: const Text('댓글'),
+                    ),
+                    TextButton.icon(
+                      onPressed: () {},
+                      label: const Text('공유하기'),
+                      icon: Icon(MdiIcons.shareOutline),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  child: Divider(
+                    height: 20,
+                    thickness: 7,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ]),
+      ]),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: const [
@@ -553,26 +544,20 @@ class FaceBookMain extends StatelessWidget {
             label: 'watch',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              label: '프로필 '
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notifications),
-              label: '알림'
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.menu),
-              label: '메뉴'
-          ),
+              icon: Icon(Icons.account_circle), label: '프로필 '),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: '알림'),
+          BottomNavigationBarItem(icon: Icon(Icons.menu), label: '메뉴'),
         ],
       ),
     );
   }
 
-
   // 스토리 메이스
-  Widget  storyMake(
-      {required BuildContext context, required Function() onPress, required Widget background, required Widget frountground}) {
+  Widget storyMake(
+      {required BuildContext context,
+      required Function() onPress,
+      required Widget background,
+      required Widget frountground}) {
     return InkWell(
         onTap: onPress,
         // style: ElevatedButton.styleFrom(
@@ -594,37 +579,79 @@ class FaceBookMain extends StatelessWidget {
               frountground,
             ],
           ),
-        ));
+        )
+    );
   }
 
   // 스토리 세번째 스토리 만들기
   Widget makeStoryMake1(
       {required BuildContext context, required Function() onPress}) {
-    return storyMake(context: context,
-      onPress: onPress,
-        background: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            image: const DecorationImage(
-                image: AssetImage('assets/images/images.jpeg'),
-                fit: BoxFit.cover
+    return storyMake(
+        context: context,
+        onPress: onPress,
+        background: Align(
+          alignment: Alignment.topLeft,
+          child: Stack(
+            children: [
+            Container(
+              width: MediaQuery.of(context).size.width * 0.3,
+              height: MediaQuery.of(context).size.height * 0.22,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                image: const DecorationImage(
+                    image: AssetImage('assets/images/images.jpeg'),
+                    fit: BoxFit.cover),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal:40),
+                    child: Text('뉴스'),
+                  ),
+
+                ),
+
+              ),
+
             ),
-          ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.04,
+                        width: MediaQuery.of(context).size.height * 0.04,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          image: const DecorationImage(
+                              image: AssetImage('assets/images/logo.png'),
+                              fit: BoxFit.cover),
+                      ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+
         ),
-      frountground: Container(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text('KBS 뉴스 '),
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          image: const DecorationImage(
-              image: AssetImage('assets/images/image1.jpeg'),
-              fit: BoxFit.cover
-        ),
-        ),
-      ),
-    );
+        frountground: Align(
+          alignment: Alignment.bottomCenter,
+            child: Container(
+            height: MediaQuery.of(context).size.height * 0.1,
+            width: MediaQuery.of(context).size.width * 0.3,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              image: const DecorationImage(
+                  image: AssetImage('assets/images/image1.jpeg'),
+                  fit: BoxFit.cover),
+                  ),
+
+                ),
+            ));
+
   }
 
   // 스토리 두번째 스토리 만들기
@@ -638,8 +665,7 @@ class FaceBookMain extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           image: const DecorationImage(
               image: AssetImage('assets/images/imagesTest.jpeg'),
-              fit: BoxFit.cover
-          ),
+              fit: BoxFit.cover),
         ),
       ),
       frountground: Align(
@@ -658,8 +684,11 @@ class FaceBookMain extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Text('스토리 만들기', textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
+                child: Text(
+                  '스토리 만들기',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             Align(
@@ -682,7 +711,11 @@ class FaceBookMain extends StatelessWidget {
                         color: Colors.blue,
                       ),
                       child: const Center(
-                        child: Icon(Icons.add, color: Colors.white, size: 32,),
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 32,
+                        ),
                       ),
                     ),
                   ),
@@ -711,8 +744,7 @@ class FaceBookMain extends StatelessWidget {
                 Colors.greenAccent,
                 Colors.lightBlueAccent,
               ],
-            )
-        ),
+            )),
       ),
       frountground: Align(
         alignment: Alignment.center,
@@ -721,27 +753,28 @@ class FaceBookMain extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              height: MediaQuery
-                  .of(context)
-                  .size
-                  .height * 0.05,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .height * 0.05,
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.height * 0.05,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
                 color: Colors.white,
               ),
               child: const Center(
-                child: Icon(Icons.music_note, color: Colors.black54,),
+                child: Icon(
+                  Icons.music_note,
+                  color: Colors.black54,
+                ),
               ),
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
-              child: Text('음악', style: TextStyle(color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16),),
+              child: Text(
+                '음악',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16),
+              ),
             ),
           ],
         ),
@@ -749,6 +782,3 @@ class FaceBookMain extends StatelessWidget {
     );
   }
 }
-
-
-
