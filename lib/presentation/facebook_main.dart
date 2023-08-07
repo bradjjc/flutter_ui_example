@@ -579,8 +579,7 @@ class FaceBookMain extends StatelessWidget {
               frountground,
             ],
           ),
-        )
-    );
+        ));
   }
 
   // 스토리 세번째 스토리 만들기
@@ -593,65 +592,68 @@ class FaceBookMain extends StatelessWidget {
           alignment: Alignment.topLeft,
           child: Stack(
             children: [
-            Container(
-              width: MediaQuery.of(context).size.width * 0.3,
-              height: MediaQuery.of(context).size.height * 0.22,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                image: const DecorationImage(
-                    image: AssetImage('assets/images/images.jpeg'),
-                    fit: BoxFit.cover),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal:40),
-                    child: Text('뉴스'),
-                  ),
-
+              Container(
+                width: MediaQuery.of(context).size.width * 0.3,
+                height: MediaQuery.of(context).size.height * 0.22,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  image: const DecorationImage(
+                      image: AssetImage('assets/images/images.jpeg'),
+                      fit: BoxFit.cover),
                 ),
-
-              ),
-
-            ),
-                  Align(
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Align(
                     alignment: Alignment.topLeft,
                     child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height * 0.04,
-                        width: MediaQuery.of(context).size.height * 0.04,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          image: const DecorationImage(
-                              image: AssetImage('assets/images/logo.png'),
-                              fit: BoxFit.cover),
-                      ),
-                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 40),
                     ),
                   ),
-                ],
+                ),
               ),
-
-
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.04,
+                    width: MediaQuery.of(context).size.height * 0.04,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      image: const DecorationImage(
+                          image: AssetImage('assets/images/logo.png'),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
         frountground: Align(
           alignment: Alignment.bottomCenter,
-            child: Container(
-            height: MediaQuery.of(context).size.height * 0.1,
-            width: MediaQuery.of(context).size.width * 0.3,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              image: const DecorationImage(
-                  image: AssetImage('assets/images/image1.jpeg'),
-                  fit: BoxFit.cover),
-                  ),
+          child: Stack(
+            children:[
+            Container(
+              height: MediaQuery.of(context).size.height * 0.1,
+              width: MediaQuery.of(context).size.width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                image: const DecorationImage(
+                    image: AssetImage('assets/images/image1.jpeg'),
+                    fit: BoxFit.cover),
+              ),
+              alignment: Alignment.bottomLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: const Text('KBS 뉴스',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+              ),
+            ),
 
-                ),
-            ));
+            ],
+          ),
 
+        ));
   }
 
   // 스토리 두번째 스토리 만들기
