@@ -307,6 +307,8 @@
 //
 
 import 'package:flutter/material.dart';
+import 'package:flutter_clone/presentation/video/News.dart';
+import 'package:flutter_clone/presentation/video/video.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class FaceBookMain extends StatelessWidget {
@@ -445,10 +447,14 @@ class FaceBookMain extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                Container(
-                  width: 400,
-                  height: 400,
-                  color: Colors.blue,
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.45,
+                      width: MediaQuery.of(context).size.width * 0.92,
+                     child: Video(),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   child: Divider(
@@ -484,10 +490,10 @@ class FaceBookMain extends StatelessWidget {
                     color: Colors.grey,
                   ),
                 ),
-                Container(
+                SizedBox(
                   width: 400,
                   height: 400,
-                  color: Colors.blue,
+                  child: News(),
                 ),
                 const SizedBox(
                   child: Divider(
@@ -627,6 +633,7 @@ class FaceBookMain extends StatelessWidget {
                   ),
                 ),
               ),
+
             ],
           ),
         ),
@@ -640,13 +647,14 @@ class FaceBookMain extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: const DecorationImage(
-                    image: AssetImage('assets/images/image1.jpeg'),
+                    image: AssetImage('assets/images/'
+                        '.jpeg'),
                     fit: BoxFit.cover),
               ),
               alignment: Alignment.bottomLeft,
-              child: Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: const Text('KBS 뉴스',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+              child: const Padding(
+                padding: EdgeInsets.all(2.0),
+                child: Text('KBS 뉴스',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
               ),
             ),
 
