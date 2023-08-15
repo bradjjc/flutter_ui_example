@@ -8,7 +8,7 @@ class Video extends StatefulWidget {
 }
 
 class _VideoState extends State<Video> {
-  static String youtubeId = 'bNdXYLp6H_0';
+  static String youtubeId = 'qa_TvzJ1vkE';
 
   final YoutubePlayerController _con = YoutubePlayerController(
     initialVideoId: youtubeId,
