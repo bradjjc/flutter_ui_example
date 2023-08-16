@@ -474,10 +474,10 @@ class FaceBookMain extends StatelessWidget {
                         ),
                         const Align(
                           alignment: Alignment.topLeft,
-                          child: 
-                            Row(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 4),
+                            child: Row(
                               children: [
-                                Align(child: Text('ccc',textAlign:TextAlign.right ,style: TextStyle(color: Colors.red),),),
                                 Column(
                                   children: [
                                     Text(
@@ -485,13 +485,13 @@ class FaceBookMain extends StatelessWidget {
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold),
-
                                     ),
-
                                     Row(
+
                                       children: [
                                         Padding(
-                                          padding: EdgeInsets.only(left: 20,right: 4.0),
+                                          padding: EdgeInsets.only(
+                                              left: 20, right: 4.0),
                                           child: Text(
                                             '6시간',
                                             style: TextStyle(
@@ -500,8 +500,11 @@ class FaceBookMain extends StatelessWidget {
                                           ),
                                         ),
                                         Padding(
-                                          padding: EdgeInsets.only(right:20),
-                                          child: Icon(Icons.public,color: Colors.white,),
+                                          padding: EdgeInsets.only(right: 20),
+                                          child: Icon(
+                                            Icons.public,
+                                            color: Colors.white,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -509,8 +512,20 @@ class FaceBookMain extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          
+                          ),
                         ),
+                         const Align(
+                           alignment: Alignment.topRight,
+                           child:Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                             children: [
+                               Icon(Icons.more_horiz,color: Colors.white),
+                               Icon(Icons.close,color: Colors.white),
+                             ],
+                           ),
+
+                        ),
+
                       ],
                     ),
                   ],
