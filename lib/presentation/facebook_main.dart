@@ -308,7 +308,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_clone/presentation/video/News.dart';
-import 'package:flutter_clone/presentation/video/video.dart';
+import 'package:flutter_clone/presentation/video/video_news.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class FaceBookMain extends StatelessWidget {
@@ -514,17 +514,20 @@ class FaceBookMain extends StatelessWidget {
                             ),
                           ),
                         ),
-                         const Align(
-                           alignment: Alignment.topRight,
-                           child:Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                             children: [
-                               Icon(Icons.more_horiz,color: Colors.white),
-                               Icon(Icons.close,color: Colors.white),
-                             ],
-                           ),
+                         const Padding(
+                           padding: EdgeInsets.symmetric(vertical: 4),
+                           child: Align(
+                             alignment: Alignment.topRight,
+                             child:Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                               children: [
+                                 Icon(Icons.more_horiz,color: Colors.white),
+                                 Icon(Icons.close,color: Colors.white),
+                               ],
+                             ),
 
                         ),
+                         ),
 
                       ],
                     ),
@@ -564,10 +567,29 @@ class FaceBookMain extends StatelessWidget {
                     color: Colors.grey,
                   ),
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.4,
-                  width: MediaQuery.of(context).size.height * 1.5,
-                  child: News(),
+                Stack(
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.4,
+                      width: MediaQuery.of(context).size.height * 1.5,
+                      child:News(),
+                    ),
+                    Align(alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.04,
+                          width: MediaQuery.of(context).size.height * 0.04,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            image: const DecorationImage(
+                                image: AssetImage('assets/images/sbs.png'),
+                                fit: BoxFit.cover),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   child: Divider(
