@@ -474,27 +474,42 @@ class FaceBookMain extends StatelessWidget {
                         ),
                         const Align(
                           alignment: Alignment.topLeft,
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 42.0, vertical: 12),
-                            child: Column(
+                          child: 
+                            Row(
                               children: [
-                                Text(
-                                  'KBS 뉴스  ',
-                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+                                Align(child: Text('ccc',textAlign:TextAlign.right ,style: TextStyle(color: Colors.red),),),
+                                Column(
+                                  children: [
+                                    Text(
+                                      'KBS 뉴스  ',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
 
+                                    ),
+
+                                    Row(
+                                      children: [
+                                        Padding(
+                                          padding: EdgeInsets.only(left: 20,right: 4.0),
+                                          child: Text(
+                                            '6시간',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(right:20),
+                                          child: Icon(Icons.public,color: Colors.white,),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.only(right:24.0),
-                                  child: Text('6시간',style: TextStyle(color: Colors.white,
-                                  ),
-                                  ),
-
-                                ),
-
                               ],
                             ),
-                          ),
+                          
                         ),
                       ],
                     ),
