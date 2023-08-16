@@ -589,6 +589,62 @@ class FaceBookMain extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 4),
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  'SBS 뉴스  ',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Row(
+
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                          left: 20, right: 4.0),
+                                      child: Text(
+                                        '6시간',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 20),
+                                      child: Icon(
+                                        Icons.public,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 4),
+                      child: Align(
+                        alignment: Alignment.topRight,
+                        child:Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Icon(Icons.more_horiz,color: Colors.white),
+                            Icon(Icons.close,color: Colors.white),
+                          ],
+                        ),
+
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(
