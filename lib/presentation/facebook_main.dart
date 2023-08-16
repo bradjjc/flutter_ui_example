@@ -449,10 +449,54 @@ class FaceBookMain extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.45,
-                      width: MediaQuery.of(context).size.width * 0.92,
-                     child: Video(),
+                    Stack(
+                      children: [
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.4,
+                          width: MediaQuery.of(context).size.height * 0.5,
+                          child: Video(),
+                        ),
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Container(
+                              height: MediaQuery.of(context).size.height * 0.04,
+                              width: MediaQuery.of(context).size.height * 0.04,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                                image: const DecorationImage(
+                                    image: AssetImage('assets/images/logo.png'),
+                                    fit: BoxFit.cover),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Align(
+                          alignment: Alignment.topLeft,
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 42.0, vertical: 12),
+                            child: Column(
+                              children: [
+                                Text(
+                                  'KBS 뉴스  ',
+                                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(right:24.0),
+                                  child: Text('6시간',style: TextStyle(color: Colors.white,
+                                  ),
+                                  ),
+
+                                ),
+
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -491,8 +535,8 @@ class FaceBookMain extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 400,
-                  height: 400,
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  width: MediaQuery.of(context).size.height * 1.5,
                   child: News(),
                 ),
                 const SizedBox(
@@ -633,34 +677,34 @@ class FaceBookMain extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
         ),
         frountground: Align(
           alignment: Alignment.bottomCenter,
           child: Stack(
-            children:[
-            Container(
-              height: MediaQuery.of(context).size.height * 0.1,
-              width: MediaQuery.of(context).size.width * 0.3,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                image: const DecorationImage(
-                    image: AssetImage('assets/images/'
-                        '.jpeg'),
-                    fit: BoxFit.cover),
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.1,
+                width: MediaQuery.of(context).size.width * 0.3,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  image: const DecorationImage(
+                      image: AssetImage('assets/images/image1.jpeg'),
+                      fit: BoxFit.cover),
+                ),
+                alignment: Alignment.bottomLeft,
+                child: const Padding(
+                  padding: EdgeInsets.all(2.0),
+                  child: Text(
+                    'KBS 뉴스',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ),
               ),
-              alignment: Alignment.bottomLeft,
-              child: const Padding(
-                padding: EdgeInsets.all(2.0),
-                child: Text('KBS 뉴스',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
-              ),
-            ),
-
             ],
           ),
-
         ));
   }
 
