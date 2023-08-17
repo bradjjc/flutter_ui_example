@@ -1,311 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-// class FaceBookMain extends StatelessWidget {
-//   const FaceBookMain({Key? key}) : super(key: key);
-//
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('facebook'),
-//         centerTitle: false,
-//         titleTextStyle: const TextStyle(
-//           color: Colors.blue,
-//           fontSize: 24,
-//           fontWeight: FontWeight.bold,
-//         ),
-//         backgroundColor: Colors.white,
-//         actions: [
-//           Padding(
-//             padding: const EdgeInsets.only(left: 8),
-//             child: Ink(
-//               decoration: const ShapeDecoration(
-//                 shape: CircleBorder(),
-//                 color: Colors.grey,
-//               ),
-//               child: IconButton(
-//                 onPressed: () {},
-//                 icon: const Icon(Icons.add),
-//                 color: Colors.black,
-//               ),
-//             ),
-//           ),
-//           Padding(
-//             padding: const EdgeInsets.only(left: 8, right: 8),
-//             child: Ink(
-//               decoration: const ShapeDecoration(
-//                 shape: CircleBorder(),
-//                 color: Colors.grey,
-//               ),
-//               child: IconButton(
-//                 onPressed: () {},
-//                 icon: const Icon(Icons.search),
-//                 color: Colors.black,
-//               ),
-//             ),
-//           ),
-//           Ink(
-//             decoration: const ShapeDecoration(
-//               shape: CircleBorder(),
-//               color: Colors.grey,
-//             ),
-//             child: IconButton(
-//               onPressed: () {},
-//               icon: Icon(MdiIcons.facebookMessenger),
-//               color: Colors.black,
-//             ),
-//           ),
-//         ],
-//         elevation: 0,
-//       ),
-//       body: ListView(
-//           children: [
-//         Row(
-//           mainAxisAlignment: MainAxisAlignment.spaceAround,
-//           children: [
-//             Padding(
-//               padding: const EdgeInsets.only(right: 20),
-//               child: Ink(
-//                 child: IconButton(
-//                   onPressed: () {},
-//                   icon: const Icon(Icons.account_circle, size: 50),
-//                   color: Colors.grey,
-//                 ),
-//               ),
-//             ),
-//             Padding(
-//               padding: const EdgeInsets.only(top: 12, right: 70),
-//               child: TextButton(
-//                 onPressed: () {},
-//                 child: const Text('무슨생각을 하고계신가요?                   '),
-//               ),
-//             ),
-//             IconButton(
-//               onPressed: () {},
-//               icon: const Icon(Icons.camera_alt),
-//             ),
-//           ],
-//         ),
-//         const SizedBox(
-//           child: Divider(
-//             height: 20,
-//             thickness: 7,
-//             color: Colors.grey,
-//           ),
-//         ),
-//         Column(
-//           children: [
-//             SingleChildScrollView(
-//               scrollDirection: Axis.horizontal,
-//               child: Row(
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(
-//                         left: 8, right: 8, top: 4, bottom: 4),
-//                     child: ElevatedButton(
-//                         style: ElevatedButton.styleFrom(
-//                           minimumSize: const Size(100, 200),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(12),
-//                           ),
-//                         ),
-//                         onPressed: () {},
-//                         child: const Text('스토리만들기')),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(
-//                         left: 8, right: 8, top: 4, bottom: 4),
-//                     child: ElevatedButton(
-//                         style: ElevatedButton.styleFrom(
-//                           minimumSize: const Size(100, 200),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(12),
-//                           ),
-//                         ),
-//                         onPressed: () {},
-//                         child: const Text('스토리')),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(
-//                         left: 8, right: 8, top: 4, bottom: 4),
-//                     child: ElevatedButton(
-//                         style: ElevatedButton.styleFrom(
-//                           minimumSize: const Size(100, 200),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(12),
-//                           ),
-//                         ),
-//                         onPressed: () {},
-//                         child: const Text('스토리')),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(
-//                         left: 8, right: 8, top: 4, bottom: 4),
-//                     child: ElevatedButton(
-//                         style: ElevatedButton.styleFrom(
-//                           minimumSize: const Size(100, 200),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(12),
-//                           ),
-//                         ),
-//                         onPressed: () {},
-//                         child: const Text('스토리')),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(
-//                         left: 8, right: 8, top: 4, bottom: 4),
-//                     child: ElevatedButton(
-//                         style: ElevatedButton.styleFrom(
-//                           backgroundColor: Colors.black,
-//                           minimumSize: const Size(100, 200),
-//                           shape: RoundedRectangleBorder(
-//                             borderRadius: BorderRadius.circular(12),
-//                           ),
-//                         ),
-//                         onPressed: () {},
-//                         child: const Text('스토리')),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ],
-//         ),
-//         const SizedBox(
-//           child: Divider(
-//             height: 20,
-//             thickness: 7,
-//             color: Colors.grey,
-//           ),
-//         ),
-//         Column(children: [
-//           SingleChildScrollView(
-//             scrollDirection: Axis.vertical,
-//             child: Column(
-//               children: [
-//                 Container(
-//                   width: 400,
-//                   height: 400,
-//                   color: Colors.blue,
-//                 ),
-//                 const SizedBox(
-//                   child: Divider(
-//                     height: 20,
-//                     thickness: 1,
-//                     color: Colors.grey,
-//                   ),
-//                 ),
-//                 Row(
-//                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-//                   children: [
-//                     TextButton.icon(
-//                       onPressed: () {},
-//                       icon: const Icon(Icons.thumb_up_alt),
-//                       label: const Text('좋아요'),
-//                     ),
-//                     TextButton.icon(
-//                       onPressed: () {},
-//                       icon: const Icon(Icons.messenger),
-//                       label: const Text('댓글'),
-//                     ),
-//                     TextButton.icon(
-//                       onPressed: () {},
-//                       label: const Text('공유하기'),
-//                       icon: Icon(MdiIcons.shareOutline),
-//                     ),
-//                   ],
-//                 ),
-//                 const SizedBox(
-//                   child: Divider(
-//                     height: 20,
-//                     thickness: 7,
-//                     color: Colors.grey,
-//                   ),
-//                 ),
-//
-//             Container(
-//               width: 400,
-//               height: 400,
-//               color: Colors.blue,
-//             ),
-//             const SizedBox(
-//               child: Divider(
-//                 height: 20,
-//                 thickness: 1,
-//                 color: Colors.grey,
-//               ),
-//             ),
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.spaceAround,
-//               children: [
-//                 TextButton.icon(
-//                   onPressed: () {},
-//                   icon: const Icon(Icons.thumb_up_alt),
-//                   label: const Text('좋아요'),
-//                 ),
-//                 TextButton.icon(
-//                   onPressed: () {},
-//                   icon: const Icon(Icons.messenger),
-//                   label: const Text('댓글'),
-//                 ),
-//                 TextButton.icon(
-//                   onPressed: () {},
-//                   label: const Text('공유하기'),
-//                   icon: Icon(MdiIcons.shareOutline),
-//                 ),
-//               ],
-//             ),
-//                 const SizedBox(
-//                   child: Divider(
-//                     height: 20,
-//                     thickness: 7,
-//                     color: Colors.grey,
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ]),
-//
-//       ]),
-//
-//       bottomNavigationBar: BottomNavigationBar(
-//           type: BottomNavigationBarType.fixed,
-//       items: const [
-//       BottomNavigationBarItem(
-//       icon: Icon(Icons.home),
-//       label: '홈',
-//       ),
-//       BottomNavigationBarItem(
-//         icon: Icon(Icons.people_alt),
-//         label: '친구',
-//       ),
-//       BottomNavigationBarItem(
-//         icon: Icon(Icons.ondemand_video),
-//         label: 'watch',
-//     ),
-//       BottomNavigationBarItem(
-//         icon: Icon(Icons.account_circle),
-//         label: '프로필 '
-//       ),
-//       BottomNavigationBarItem(
-//           icon: Icon(Icons.notifications),
-//           label: '알림'
-//       ),
-//       BottomNavigationBarItem(
-//           icon: Icon(Icons.menu),
-//           label: '메뉴'
-//       ),
-//     ],
-//
-//
-//       ),
-//     );
-//   }
-// }
-//
-//
-
 import 'package:flutter/material.dart';
 import 'package:flutter_clone/presentation/video/News.dart';
 import 'package:flutter_clone/presentation/video/video_news.dart';
@@ -432,6 +124,14 @@ class FaceBookMain extends StatelessWidget {
                   onPress: () {},
                 ),
               ),
+              Padding(
+                padding:
+                const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+                child: makeStoryNews(
+                  context: context,
+                  onPress: () {},
+                ),
+              ),
             ],
           ),
         ),
@@ -475,7 +175,8 @@ class FaceBookMain extends StatelessWidget {
                         const Align(
                           alignment: Alignment.topLeft,
                           child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 4),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 30.0, vertical: 4),
                             child: Row(
                               children: [
                                 Column(
@@ -487,7 +188,6 @@ class FaceBookMain extends StatelessWidget {
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Row(
-
                                       children: [
                                         Padding(
                                           padding: EdgeInsets.only(
@@ -514,21 +214,19 @@ class FaceBookMain extends StatelessWidget {
                             ),
                           ),
                         ),
-                         const Padding(
-                           padding: EdgeInsets.symmetric(vertical: 4),
-                           child: Align(
-                             alignment: Alignment.topRight,
-                             child:Row(
+                        const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 4),
+                          child: Align(
+                            alignment: Alignment.topRight,
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
-                               children: [
-                                 Icon(Icons.more_horiz,color: Colors.white),
-                                 Icon(Icons.close,color: Colors.white),
-                               ],
-                             ),
-
+                              children: [
+                                Icon(Icons.more_horiz, color: Colors.white),
+                                Icon(Icons.close, color: Colors.white),
+                              ],
+                            ),
+                          ),
                         ),
-                         ),
-
                       ],
                     ),
                   ],
@@ -572,9 +270,10 @@ class FaceBookMain extends StatelessWidget {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.4,
                       width: MediaQuery.of(context).size.height * 1.5,
-                      child:News(),
+                      child: News(),
                     ),
-                    Align(alignment: Alignment.topLeft,
+                    Align(
+                      alignment: Alignment.topLeft,
                       child: Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: Container(
@@ -592,7 +291,8 @@ class FaceBookMain extends StatelessWidget {
                     const Align(
                       alignment: Alignment.topLeft,
                       child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 4),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 30.0, vertical: 4),
                         child: Row(
                           children: [
                             Column(
@@ -604,11 +304,10 @@ class FaceBookMain extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Row(
-
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.only(
-                                          left: 20, right: 4.0),
+                                      padding:
+                                          EdgeInsets.only(left: 20, right: 4.0),
                                       child: Text(
                                         '6시간',
                                         style: TextStyle(
@@ -635,14 +334,13 @@ class FaceBookMain extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 4),
                       child: Align(
                         alignment: Alignment.topRight,
-                        child:Row(
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Icon(Icons.more_horiz,color: Colors.white),
-                            Icon(Icons.close,color: Colors.white),
+                            Icon(Icons.more_horiz, color: Colors.white),
+                            Icon(Icons.close, color: Colors.white),
                           ],
                         ),
-
                       ),
                     ),
                   ],
@@ -738,6 +436,33 @@ class FaceBookMain extends StatelessWidget {
             ],
           ),
         ));
+  }
+
+  //스토리 네번째 스토리 만들기
+  Widget makeStoryNews(
+      {required BuildContext context, required Function() onPress}) {
+    return storyMake(
+      context: context,
+      onPress: onPress,
+      background: Align(
+        child: Stack(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width*0.3,
+              height: MediaQuery.of(context).size.height*0.22,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                image: const DecorationImage(
+                  image: AssetImage('assets/images/jamboree.jpeg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+      frountground: Align(),
+    );
   }
 
   // 스토리 세번째 스토리 만들기
