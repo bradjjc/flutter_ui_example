@@ -474,6 +474,18 @@ class FaceBookMain extends StatelessWidget {
                 ),
               ),
             ),
+            const Align(
+              alignment: Alignment.bottomLeft,
+              child:Align(
+                child: Text(
+                  '# 잼버리 끝이났는데 ',
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -499,7 +511,6 @@ class FaceBookMain extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
             ),
-
           ],
         ),
       ),
