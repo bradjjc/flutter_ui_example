@@ -126,7 +126,7 @@ class FaceBookMain extends StatelessWidget {
               ),
               Padding(
                 padding:
-                const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+                    const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
                 child: makeStoryNews(
                   context: context,
                   onPress: () {},
@@ -448,8 +448,8 @@ class FaceBookMain extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width*0.3,
-              height: MediaQuery.of(context).size.height*0.22,
+              width: MediaQuery.of(context).size.width * 0.4,
+              height: MediaQuery.of(context).size.height * 0.32,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: const DecorationImage(
@@ -458,10 +458,36 @@ class FaceBookMain extends StatelessWidget {
                 ),
               ),
             ),
+
           ],
         ),
       ),
-      frountground: Align(),
+      frountground: Align(
+        alignment: Alignment.bottomCenter,
+        child: Stack(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.1,
+              width: MediaQuery.of(context).size.width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                image: const DecorationImage(
+                    image: AssetImage('assets/images/sbsimage.jpeg'),
+                    fit: BoxFit.cover),
+              ),
+              child: const Text(
+                '# 야산에서 성폭행 ',
+                style: TextStyle(
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16),
+                textAlign: TextAlign.start,
+              ),
+            ),
+
+          ],
+        ),
+      ),
     );
   }
 
@@ -476,7 +502,7 @@ class FaceBookMain extends StatelessWidget {
           child: Stack(
             children: [
               Container(
-                width: MediaQuery.of(context).size.width * 0.3,
+                width: MediaQuery.of(context).size.width * 0.4,
                 height: MediaQuery.of(context).size.height * 0.22,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
