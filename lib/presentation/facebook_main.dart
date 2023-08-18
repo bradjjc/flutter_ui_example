@@ -458,7 +458,22 @@ class FaceBookMain extends StatelessWidget {
                 ),
               ),
             ),
-
+            Align(
+              alignment: Alignment.topLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.04,
+                  width: MediaQuery.of(context).size.height * 0.04,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    image: const DecorationImage(
+                        image: AssetImage('assets/images/sbs.png'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
