@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clone/presentation/video/News.dart';
+import 'package:flutter_clone/presentation/video/news.dart';
 import 'package:flutter_clone/presentation/video/video_news.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
