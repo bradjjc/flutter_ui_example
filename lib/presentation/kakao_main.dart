@@ -116,7 +116,7 @@ class _kakaoMainState extends State<kakaoMain>
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 35),
+                  padding: EdgeInsets.only(left: 40),
                   child: SizedBox(
                       width: 350,
                       height: 100,
@@ -125,9 +125,10 @@ class _kakaoMainState extends State<kakaoMain>
                             borderRadius: BorderRadius.all(
                               Radius.circular(20),
                             ),
-
                               color: Colors.lightBlue,
+
                           ),
+
 
                       ),
                     ),

@@ -2,18 +2,18 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class Video extends StatefulWidget {
+class News extends StatefulWidget {
   @override
-  State<Video> createState() => _VideoState();
+  State<News> createState() => _NewsState();
 }
 
-class _VideoState extends State<Video> {
-  static String youtubeId = 'qa_TvzJ1vkE';
+class _NewsState extends State<News> {
+  static String youtubeId = 'PMgEKdUY3MI';
 
   final YoutubePlayerController _con = YoutubePlayerController(
     initialVideoId: youtubeId,
     flags: const YoutubePlayerFlags(
-      autoPlay: true,
+      autoPlay: false,
       mute: false,
     ),
   );
@@ -21,10 +21,9 @@ class _VideoState extends State<Video> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
-        width: 400,
-        height:400,
+        width: MediaQuery.of(context).size.width * 1.5,
+        height: MediaQuery.of(context).size.height * 1.5,
         child: YoutubePlayer(
           controller: _con,
         ),

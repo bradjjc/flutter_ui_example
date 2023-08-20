@@ -166,7 +166,7 @@ class FaceBookMain extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(100),
                                 image: const DecorationImage(
-                                    image: AssetImage('assets/images/logo.png'),
+                                    image: AssetImage('assets/images/facebook/logo.png'),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -282,7 +282,7 @@ class FaceBookMain extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100),
                             image: const DecorationImage(
-                                image: AssetImage('assets/images/sbs.png'),
+                                image: AssetImage('assets/images/facebook/sbs.png'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -453,7 +453,7 @@ class FaceBookMain extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/jamboree.jpeg'),
+                  image: AssetImage('assets/images/facebook/jamboree.jpeg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -468,7 +468,7 @@ class FaceBookMain extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(100),
                     image: const DecorationImage(
-                        image: AssetImage('assets/images/sbs.png'),
+                        image: AssetImage('assets/images/facebook/sbs.png'),
                         fit: BoxFit.cover),
                   ),
                 ),
@@ -499,7 +499,7 @@ class FaceBookMain extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: const DecorationImage(
-                    image: AssetImage('assets/images/sbsimage.jpeg'),
+                    image: AssetImage('assets/images/facebook/sbsimage.jpeg'),
                     fit: BoxFit.cover),
               ),
               child: const Text(
@@ -533,7 +533,7 @@ class FaceBookMain extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   image: const DecorationImage(
-                      image: AssetImage('assets/images/images.jpeg'),
+                      image: AssetImage('assets/images/facebook/images.jpeg'),
                       fit: BoxFit.cover),
                 ),
                 child: const Padding(
@@ -556,7 +556,7 @@ class FaceBookMain extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       image: const DecorationImage(
-                          image: AssetImage('assets/images/logo.png'),
+                          image: AssetImage('assets/images/facebook/logo.png'),
                           fit: BoxFit.cover),
                     ),
                   ),
@@ -575,7 +575,7 @@ class FaceBookMain extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   image: const DecorationImage(
-                      image: AssetImage('assets/images/image1.jpeg'),
+                      image: AssetImage('assets/images/facebook/image1.jpeg'),
                       fit: BoxFit.cover),
                 ),
                 alignment: Alignment.bottomLeft,
@@ -603,7 +603,7 @@ class FaceBookMain extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           image: const DecorationImage(
-              image: AssetImage('assets/images/imagesTest.jpeg'),
+              image: AssetImage('assets/images/facebook/imagesTest.jpeg'),
               fit: BoxFit.cover),
         ),
       ),

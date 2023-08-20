@@ -68,15 +68,17 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/sbs.png
-    - assets/images/sbsimage.jpeg
-    - assets/images/jamboree.jpeg
+
+    - assets/images/carrotmarket/carrotImage.jpeg
+    - assets/images/facebook/sbs.png
+    - assets/images/facebook/sbsimage.jpeg
+    - assets/images/facebook/jamboree.jpeg
     - assets/video/video.MP4
-    - assets/images/imagesTest.jpeg
-    - assets/images/images.jpeg
-    - assets/images/image1.jpeg
-    - assets/images/kbsNews.png
-    - assets/images/logo.png
+    - assets/images/facebook/imagesTest.jpeg
+    - assets/images/facebook/images.jpeg
+    - assets/images/facebook/image1.jpeg
+    - assets/images/facebook/kbsNews.png
+    - assets/images/facebook/logo.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
