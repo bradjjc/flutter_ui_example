@@ -248,34 +248,35 @@ class carrotMarket extends StatelessWidget {
                               fontSize: 18),
                           textAlign: TextAlign.left,
                         ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 220.0),
-                           
-                              child: Row(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Icon(
-                                        CupertinoIcons.chat_bubble_2,
-                                        color: Colors.white,
-                                      ),
-                                      Text(
-                                        '12',
-                                        style: TextStyle(color: Colors.white),
-                                      ), Icon(
-                                        CupertinoIcons.heart,
-                                        color: Colors.white,
-                                      ),
-                                      Text(
-                                        '12',
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.75,
+                            child: Row(
+                                  children: [
+                                    Expanded(child: Container()),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          CupertinoIcons.chat_bubble_2,
+                                          color: Colors.white,
+                                        ),
+                                        Text(
+                                          '12',
+                                          style: TextStyle(color: Colors.white),
+                                        ), Icon(
+                                          CupertinoIcons.heart,
+                                          color: Colors.white,
+                                        ),
+                                        Text(
+                                          '12',
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                           ),
+                            
+
 
                       ],
                     ),
