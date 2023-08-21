@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clone/presentation/carrot_market.dart';
 import 'package:flutter_clone/presentation/facebook_main.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -16,14 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-      home: const carrotMarket(),
+      home: const FaceBookMain(),
+      // home: const carrotMarket(),
     );
   }
 }
-
-
-
