@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class carrotMarket extends StatelessWidget {
   const carrotMarket({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class carrotMarket extends StatelessWidget {
           Icon(Icons.notifications),
         ],
       ),
-      body: SizedBox(
+      body: SafeArea(
         child: ListView(
           children: [
             Row(
@@ -48,46 +49,75 @@ class carrotMarket extends StatelessWidget {
                   ),
                 ),
                 const Center(
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'PT 무료나눔 합니다.~!~!',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 4.0),
-                              child: Text(
-                                '비전동 ・ 끌올 4일전',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ),
-                            Text(
-                              '나눔 🧡',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18),
-                              textAlign: TextAlign.left,
-                            ),
-                          ],
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'PT 무료나눔 합니다.~!~!',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
                         ),
-                      ),
-                    ],
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 4.0),
+                          child: Text(
+                            '비전동 ・ 끌올 4일전',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '나눔 🧡',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                          textAlign: TextAlign.left,
+                        ),
+                        Align(
+
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 23.0),
+                              child: Row(
+
+                                children: [
+                                  Icon(
+                                    Icons.email_outlined,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '12',
+                                    style: TextStyle(color: Colors.white),
+                                  ), Icon(
+                                    CupertinoIcons.chat_bubble_2,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '12',
+                                    style: TextStyle(color: Colors.white),
+                                  ), Icon(
+                                    CupertinoIcons.chat_bubble_2,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    '12',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-
               ],
             ),
             const Divider(
@@ -100,42 +130,3 @@ class carrotMarket extends StatelessWidget {
     );
   }
 }
-
-/*
- SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  width: MediaQuery.of(context).size.height * 0.15,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    image: const DecorationImage(
-                        image: AssetImage(
-                            'assets/images/carrotmarket/carrotImage.jpeg'),
-                        fit: BoxFit.cover),
-                  ),
-
-                ),
-              ],
-            ),
-            const Center(
-              child: Column(
-                  children: [
-
-                    Text(
-                      'dddd',
-                      style: TextStyle(color: Colors.white),
-                    ),
-
-                  ],
-                ),
-              ),
-
-          ],
-        ),
-      ),
- */
