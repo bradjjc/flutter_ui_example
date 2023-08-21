@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 class carrotMarket extends StatelessWidget {
   const carrotMarket({Key? key}) : super(key: key);
-
+// appbar
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,7 +102,7 @@ class carrotMarket extends StatelessWidget {
                                     '12',
                                     style: TextStyle(color: Colors.white),
                                   ), Icon(
-                                    CupertinoIcons.chat_bubble_2,
+                                    CupertinoIcons.heart,
                                     color: Colors.white,
                                   ),
                                   Text(
@@ -110,10 +110,173 @@ class carrotMarket extends StatelessWidget {
                                     style: TextStyle(color: Colors.white),
                                   ),
                                 ],
-                              
+
                             ),
                           ),
                         ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const Divider(
+              color: Colors.grey,
+            ),
+            Row(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    image: const DecorationImage(
+                        image: AssetImage(
+                            'assets/images/carrotmarket/pt.jpeg'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                const Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'PT3회 양도',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 4.0),
+                          child: Text(
+                            '비전동 10일전',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '나눔 🧡',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                          textAlign: TextAlign.left,
+                        ),
+                        Align(
+
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 23.0),
+                            child: Row(
+
+                              children: [
+                                Icon(
+                                  CupertinoIcons.chat_bubble_2,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  '12',
+                                  style: TextStyle(color: Colors.white),
+                                ), Icon(
+                                  CupertinoIcons.heart,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  '12',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const Divider(
+              color: Colors.grey,
+            ),
+            Row(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    image: const DecorationImage(
+                        image: AssetImage(
+                            'assets/images/carrotmarket/pt.jpeg'),
+                        fit: BoxFit.cover),
+                  ),
+                ),
+                 Center(
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'PT3회 양도',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 4.0),
+                          child: Text(
+                            '비전동 10일전',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '나눔 🧡',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                          textAlign: TextAlign.left,
+                        ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 220.0),
+                           
+                              child: Row(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        CupertinoIcons.chat_bubble_2,
+                                        color: Colors.white,
+                                      ),
+                                      Text(
+                                        '12',
+                                        style: TextStyle(color: Colors.white),
+                                      ), Icon(
+                                        CupertinoIcons.heart,
+                                        color: Colors.white,
+                                      ),
+                                      Text(
+                                        '12',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            
+                          ),
+
                       ],
                     ),
                   ),
